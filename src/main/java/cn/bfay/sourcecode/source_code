@@ -1,0 +1,12 @@
+1. 利用 EncodedResource 二次包装资源文件
+2. 获取资源输入流，并构造 InputSource 对象
+3. 获取 XML 文件的实体解析器和验证模式
+4. 加载 XML 文件，获取对应的 Document 对象
+5. 由 Document 对象解析并注册 bean
+
+
+资源文件的读取，bean的注册
+资源文件读取是获取定义的resource,转换为encodedResource,再通过inputStream分装成inputSource.
+bean注册是将inputSource转换为Document对象，然后将Document对象解析并注册bean,
+最终由doRegisterBeanDefinitions方法(DefaultBeanDefinitionDocumentReader)实现
+(在解析并注册 BeanDefinition 前后各设置一个模板方法，留给子类扩展实现)

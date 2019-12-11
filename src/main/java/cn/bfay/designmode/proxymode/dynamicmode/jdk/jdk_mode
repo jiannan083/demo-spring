@@ -1,0 +1,1 @@
+JDK动态代理的实现是在运行时，根据一组接口定义，使用Proxy、InvocationHandler等工具类去生成一个代理类和代理类实例
