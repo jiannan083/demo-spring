@@ -12,7 +12,7 @@
     <!--注：如果配置了<context:component-scan>那么<context:annotation-config/>标签就可以不用在xml中再配置了，-->
     <!--因为前者包含了后者。另外<context:annotation-config/>还提供了两个子标签 <context:include-filter>和 <context:exclude-filter>-->
     <!--<context:component-scan base-package="cn.bfay"/>-->
-    <context:component-scan base-package="cn.bfay" use-default-filters="false">
+    <context:component-scan base-package="cn.bfay.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 

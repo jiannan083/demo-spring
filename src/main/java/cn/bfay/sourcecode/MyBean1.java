@@ -1,4 +1,4 @@
-package cn.bfay;
+package cn.bfay.sourcecode;
 
 /**
  * MyBean1.

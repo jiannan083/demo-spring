@@ -1,4 +1,4 @@
-package cn.bfay;
+package cn.bfay.sourcecode;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
