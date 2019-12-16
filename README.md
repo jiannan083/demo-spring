@@ -76,8 +76,9 @@ public AnnotationConfigApplicationContext(Class<?>... annotatedClasses) {
 			prepareRefresh();
 
 			// Tell the subclass to refresh the internal bean factory.
-		  // xml方式：创建BeanFactory并加载xml文件中bean到beanDefinationMap
+		  // xml方式：创建BeanFactory并加载xml文件中定义的bean到beanDefinationMap
 		  // 注解方式：没干啥
+		  // springmvc中：创建BeanFactory并加载xml文件中定义的bean和包扫描下的有注解@Component@Service@Configuration@Controller的注解的bean到beanDefinationMap
 			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
 
 			// Prepare the bean factory for use in this context.
