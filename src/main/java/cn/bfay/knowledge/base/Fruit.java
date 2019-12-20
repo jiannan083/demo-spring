@@ -7,4 +7,7 @@ package cn.bfay.knowledge.base;
  * @since 2019/12/19
  */
 public class Fruit {
+    public Fruit() {
+        System.out.println("I am fruit");
+    }
 }
