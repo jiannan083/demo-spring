@@ -1,6 +1,7 @@
 package cn.bfay.knowledge.designmode.proxymode.staticmode;
 
 import cn.bfay.knowledge.designmode.proxymode.FoodService;
+import cn.bfay.knowledge.designmode.proxymode.LiuQiangDong;
 import cn.bfay.knowledge.designmode.proxymode.ZiRanRen;
 
 /**
@@ -14,7 +15,11 @@ public class StaticModeTest {
         ZiRanRen ls1 = new MaYunLvShi();
         ls1.quanli();
 
-        ZiRanRen ls2 = new LiuQiangDongLvShi();
+        // 静态代理
+        // 1.ZiRanRen --> 接口 ----> 类比Runnable
+        // 2.LiuQiangDongLvShi --> 代理类 ----> 类比Thread
+        // 3.LiuQiangDong --> 具体实现类 ----> 类比MyThread
+        LiuQiangDongLvShi ls2 = new LiuQiangDongLvShi(new LiuQiangDong());
         ls2.quanli();
 
         // 这里用代理类来实例化

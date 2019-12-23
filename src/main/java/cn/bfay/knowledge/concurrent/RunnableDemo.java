@@ -26,13 +26,13 @@ public class RunnableDemo implements Runnable {
             System.out.println(Thread.currentThread().getName() + "----" + number++);
         }
         // =========方式2
-        lock.lock();
-        try {
-            System.out.println(Thread.currentThread().getName() + "----" + number++);
-        } finally {
-            //用try finally块保证Unlock一定要执行
-            lock.unlock();
-        }
+        //lock.lock();
+        //try {
+        //    System.out.println(Thread.currentThread().getName() + "----" + number++);
+        //} finally {
+        //    //用try finally块保证Unlock一定要执行
+        //    lock.unlock();
+        //}
 
         try {
             Thread.sleep(200L);

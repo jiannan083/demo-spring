@@ -7,13 +7,13 @@ package cn.bfay.knowledge.designmode.proxymode;
  * @since 2019/11/28
  */
 public class LiuQiangDong implements ZiRanRen {
-    public void eat() {
-        System.out.println("今天吃满汉全席");
-    }
-
-    public void drink() {
-        System.out.println("今天喝大西洋");
-    }
+    //public void eat() {
+    //    System.out.println("今天吃满汉全席");
+    //}
+    //
+    //public void drink() {
+    //    System.out.println("今天喝大西洋");
+    //}
 
     @Override
     public void quanli() {

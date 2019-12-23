@@ -1,6 +1,5 @@
 package cn.bfay.knowledge.designmode.proxymode.staticmode;
 
-import cn.bfay.knowledge.designmode.proxymode.LiuQiangDong;
 import cn.bfay.knowledge.designmode.proxymode.ZiRanRen;
 
 /**
@@ -10,8 +9,14 @@ import cn.bfay.knowledge.designmode.proxymode.ZiRanRen;
  * @since 2019/11/28
  */
 public class LiuQiangDongLvShi implements ZiRanRen {
+    private ZiRanRen target;
+
+    public LiuQiangDongLvShi(ZiRanRen target) {
+        this.target = target;
+    }
+
     @Override
     public void quanli() {
-        new LiuQiangDong().quanli();
+        target.quanli();
     }
 }
