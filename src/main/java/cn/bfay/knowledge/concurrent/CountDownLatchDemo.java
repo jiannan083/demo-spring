@@ -10,7 +10,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CountDownLatchDemo {
     public static void main(String[] args) {
-        final CountDownLatch countDownLatch = new CountDownLatch(1);
+        final CountDownLatch countDownLatch = new CountDownLatch(3);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -26,7 +26,21 @@ public class CountDownLatchDemo {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println("先行者执行完成...");
+                System.out.println("先行者1执行完成...");
+                countDownLatch.countDown();
+            }
+        }).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("先行者2执行完成...");
+                countDownLatch.countDown();
+            }
+        }).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("先行者3执行完成...");
                 countDownLatch.countDown();
             }
         }).start();
