@@ -15,11 +15,11 @@ public class RunnableDemo implements Runnable {
 
     @Override
     public void run() {
-        try {
-            Thread.sleep(200L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        //try {
+        //    Thread.sleep(200L);
+        //} catch (InterruptedException e) {
+        //    e.printStackTrace();
+        //}
 
         // =========方式1
         synchronized (this) {
@@ -34,11 +34,11 @@ public class RunnableDemo implements Runnable {
         //    lock.unlock();
         //}
 
-        try {
-            Thread.sleep(200L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        //try {
+        //    Thread.sleep(200L);
+        //} catch (InterruptedException e) {
+        //    e.printStackTrace();
+        //}
     }
 
 
