@@ -3,6 +3,7 @@ package cn.bfay.knowledge.concurrent;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * MapDemo.
@@ -12,7 +13,8 @@ import java.util.Map;
  */
 public class MapDemo {
     public static void main(String[] args) {
-        hashMapDemo();
+        //hashMapDemo();
+        concurrentHashMapDemo();
     }
 
     private static void hashMapDemo() {
@@ -36,6 +38,15 @@ public class MapDemo {
 
     private static void hashTableDemo() {
         Map<String, String> table = new Hashtable<>();
-        table.put("1","a");
+        table.put("1", "a");
+    }
+
+    private static void concurrentHashMapDemo() {
+        Map<String, String> map = new ConcurrentHashMap<>();
+        map.put("1", "a");
+        map.put("2", "b");
+
+        System.out.println("-----size=" + map.size());
+        System.out.println("-----map.get(\"1\")=" + map.get("1"));
     }
 }
