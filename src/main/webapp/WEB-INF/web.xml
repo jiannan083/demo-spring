@@ -14,6 +14,10 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!--<filter>-->
+    <!--<filter-name></filter-name>-->
+    <!--</filter>-->
+
     <!-- springmvc 控制器  Processes application requests -->
     <servlet>
         <servlet-name>dispatcherServlet</servlet-name>
