@@ -9,7 +9,7 @@ import org.junit.Test;
  * @author wangjiannan
  * @since 2020/12/10
  */
-public class TreeTest {
+public class TreeTest1 {
     @Test
     public void testVist() {
         TreeNode tree = createTree();
